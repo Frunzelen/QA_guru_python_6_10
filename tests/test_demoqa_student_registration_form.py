@@ -24,7 +24,7 @@ def test_for_registration_form_demoqa():
     browser.element('#uploadPicture').set_value(os.path.abspath(
         os.path.join(os.path.dirname(tests.__file__), 'resources/Angelina_Jolie.jpg')))
     browser.element('#currentAddress').should(be.blank).type(
-        'Los Angeles, Borogodskaya, 15')
+        'Los Angeles, Borogodskaya, 17')
     browser.element('#state').click()
     browser.all('[id^=react-select][id*=option]').element_by(
         have.exact_text("NCR")).click()
@@ -46,7 +46,7 @@ def test_for_registration_form_demoqa():
     browser.all('.modal-body tr td')[13].should(have.exact_text('Sports'))
     browser.all('.modal-body tr td')[15].should(have.exact_text('Angelina_Jolie.jpg'))
     browser.all('.modal-body tr td')[17].should(
-        have.exact_text('Los Angeles, Borogodskaya, 15'))
+        have.exact_text('Los Angeles, Borogodskaya, 17'))
     browser.all('.modal-body tr td')[19].should(have.exact_text('NCR Delhi'))
 
     # Completing the test
